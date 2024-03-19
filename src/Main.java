@@ -13,11 +13,11 @@ public class Main {
         Employee[] employees = new Employee[MAX_SIZE];
         int currentIndex = 0;
 
-        Scanner scanner = null;
+        Scanner scanner = null;//открываем поток
 
         try {
 
-            scanner = new Scanner(new FileReader("src/in.txt"));
+            scanner = new Scanner(new FileReader("src/in.txt"));//инициализируем поток
 
             while (scanner.hasNextLine() && currentIndex != MAX_SIZE) {
                 String fileLine = scanner.nextLine();
@@ -31,7 +31,7 @@ public class Main {
         } finally {
 
             if(scanner != null){
-                scanner.close();
+                scanner.close();//закрываем поток если он не ссылается на null
             }
         }
 
